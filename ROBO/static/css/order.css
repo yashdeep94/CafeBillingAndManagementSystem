@@ -1,0 +1,235 @@
+#orderSection{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1.5rem 14rem;
+}
+#orderSection > form{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--yellow);
+    margin: 3rem;
+    padding: 1rem;
+    row-gap: 1.5rem;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+}
+#orderSection > form > div {
+    text-align: center;
+}
+#showItemsContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#showItems {
+    display: inline-block;
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    width: 94.5%;
+    text-align: left;
+}
+#total{
+    display: inline-block;
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    width: 88%;
+    text-align: left;
+}
+#PaymentType{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    width: 94%;
+    color: white;
+}
+#showItems{
+    min-height: 3rem;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.textdesign{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    width:90%;
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+}
+.textdesign::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+#submitbtncontainer{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#submitbtn{
+    background-color: var(--black);
+    border:1px solid white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#line1{
+    transform: rotate(90deg) translate(5px,10px);
+    transform-origin:center;
+}
+#line2{
+    transform: translateY(-3px);
+}
+#showItems > div > div, #showItems > div{
+    display: inline-block;
+    vertical-align: middle;
+}
+#showItems > div{
+    background-color: var(--gray);
+    padding: 0.1rem;
+    border: none;
+    border-radius: 0.3rem;
+    margin: 0.3rem;
+}
+#showItems > div > div > svg{
+    cursor: pointer;
+}
+#cashPaymentTotal{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#cashPaymentTotal > input:first-child {
+    width: 88%;
+}
+#onlinePaymentTotal{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#tableNo, #addItemsBtn {
+    width: 94%;
+}
+#addItemsBtn {
+    cursor: pointer;
+}
+.search-bar{
+    width: 100%;
+    max-width: 15rem;
+    background: rgb(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    border: 1px solid yellow;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: 15px;
+    color: white;
+    padding: 7px 10px;
+
+}
+@media only screen and (max-width:1300px) {
+    #onlinePaymentTotal > input {
+        width: 88%;
+    }
+}
+@media only screen and (max-width:1200px){
+    #orderSection {
+        margin: 1.5rem 8rem;
+    }
+}
+@media only screen and (max-width:1000px){
+    .quantityNone, .smallQuantityDiv, .mediumQuantityDiv, .largeQuantityDiv {
+        display: none;
+    }
+    .fiveCols {
+        grid-template-columns: 35% 20% 20% 20%;
+    }
+    .displayLarge, .displayMedium, .displaySmall {
+        display: inline-block;
+    }
+    .threeCols {
+        grid-template-columns: 35% auto auto;
+    }
+}
+@media only screen and (max-width:900px){
+    #orderSection {
+        margin: 1.5rem 5rem;
+    }
+}
+@media only screen and (max-width:810px){
+    #orderSection {
+        margin: 1.5rem 3rem;
+    }
+}
+@media only screen and (max-width:750px){
+    #orderSection {
+        margin: 1.5rem 1rem;
+    }
+}
+@media only screen and (max-width:620px){
+    #orderSection > form{
+        grid-template-columns: auto;
+        margin: 1rem;
+        padding: 1rem;
+    }
+    #showItemsContainer {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #onlinePaymentTotal{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #submitbtncontainer{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #onlinePaymentTotal > input, #cashPaymentTotal > input:first-child, #total, #showItems {
+        width: 90%;
+    }
+    #AddItemsBtnContainer > button {
+        width: 20%;
+    }
+}
+@media only screen and (max-width:500px){
+    #tableNo, #addItemsBtn, #PaymentType {
+        width: 95%;
+    }
+    .quantityInput {
+        width: 35%;
+    }
+}
+@media only screen and (max-width:430px){
+    #tableNo, #addItemsBtn, #PaymentType {
+        width: 96%;
+    }
+    #submitbtn {
+        width: 45%;
+    }
+}
+@media only screen and (max-width:360px){
+    #tableNo, #addItemsBtn, #PaymentType {
+        width: 97%;
+    }
+}

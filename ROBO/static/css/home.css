@@ -1,0 +1,73 @@
+#homeSection{
+    display: grid;
+    grid-template-columns: auto;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+#homeGrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 4rem;
+    justify-items: center;
+}
+#homeGrid > div{
+    background-color: var(--yellow);
+    height: 14rem;
+    width: 14rem;
+    margin: 0rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: auto;
+    transition: 0.5s;
+    grid-template-rows: 50% 50%;
+}
+#homeOrder, #incomeCash, #homeMaintenance, #incomeOnline {
+    font-size: 2rem;
+}
+#homeGrid > div:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.BlackbagHeading{
+    background-color: var(--black);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    height: 2rem;
+    width: auto;
+    margin:10% 7%;
+}
+@media only screen and (max-width:1400px){
+    #homeGrid {
+        grid-template-columns: auto auto auto;
+        row-gap: 1rem;
+    }
+}
+@media only screen and (max-width:1000px){
+    #homeGrid {
+        grid-template-columns: auto auto;
+        row-gap: 1rem;
+    }
+}
+@media only screen and (max-width:750px){
+    #homeGrid > div{
+        font-size: 1.3rem;
+        height: 12rem;
+        width: 12rem;
+    }
+}
+@media only screen and (max-width:500px){
+    #homeGrid {
+        grid-template-columns: auto;
+    }
+}

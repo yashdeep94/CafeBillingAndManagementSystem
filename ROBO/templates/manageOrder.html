@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}| Manage Order{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/manageorder.css' %}">
+{% endblock %}
+{% block content %}
+<div id="ManageOrderSection">
+    <div class="heading">
+        MANAGE ORDER
+    </div>
+    <div id="manageOrderReport">
+        <div>
+            <div class="tableHeading borderTopLeft">Sr No</div>
+            <div class="tableHeading">Table No</div>
+            <div class="tableHeading">Order</div>
+            <div class="tableHeading">Pay Type</div>
+            <div class="tableHeading">Amount</div>
+            <div class="tableHeading borderTopRight noBorderRight">Action</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/manageorder.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,95 @@
+:root{
+    --black:#10111C;
+    --yellow:#FEED00;
+    --font:Verdana, Geneva, Tahoma, sans-serif;
+    --gray:rgb(145, 142, 142);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--black);
+    font-family: var(--font);
+    color: white;
+    min-height: 100vh;
+}
+#logo{
+    text-align: center;
+    margin-top: 1rem;
+}
+#logo > img{
+    height: 8rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+#loginWindow{
+    background-color: var(--yellow);
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    margin:3rem auto;
+    width: 40%;
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+}
+.textdesign{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    width:94%;
+    color: white;
+    font-size: 1rem;
+    margin: 0.5rem;
+}
+.textdesign::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+#submitbtncontainer{
+    text-align: center;
+    margin-top: 1rem;
+}
+#submitbtn{
+    background-color: var(--black);
+    border:1px solid white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* meadia query */
+@media only screen and (max-width:1300px){
+    #loginWindow{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:1000px){
+    #loginWindow{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:750px){
+    #logo > img{
+        height: 5rem;
+    }
+    .heading{
+        margin-bottom: 4rem;
+        margin-top: 2.5rem;
+    }
+    .textdesign{
+        width: 86%;
+    }
+}

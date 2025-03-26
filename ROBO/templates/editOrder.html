@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}| Edit Order{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/order.css' %}">
+{% endblock %}
+{% block content %}
+<div id="orderSection">
+    <div class="heading">
+        EDIT ORDER
+    </div>
+    <form action="" method="POST" id="OrderForm">
+        {% csrf_token %}
+        <div>
+            <select class="textdesign" type="text" name="name" placeholder="Table Number" id="tableNo" required>
+                <option value="1">Table No. 1</option>
+                <option value="2">Table No. 2</option>
+                <option value="3">Table No. 3</option>
+                <option value="4">Table No. 4</option>
+                <option value="5">Table No. 5</option>
+                <option value="6">Table No. 6</option>
+                <option value="parcel">Parcel</option>
+            </select>
+        </div>
+        <div>
+            <input type="button" value="Add Items" class="textdesign" id="addItemsBtn">
+        </div>
+        <div id="showItemsContainer">
+            <div id="showItems"></div>
+        </div>
+        <div>
+            <div id="total"></div>
+        </div>
+        <div>
+            <select name="payment_type" id="PaymentType" required></select>
+        </div>
+        <div class="displayNone" id="cashPaymentTotal">
+            <input type="number" name="cashPaymentTotal" class="textdesign" placeholder="Cash">
+        </div>
+        <div class="displayNone" id="onlinePaymentTotal">
+            <input type="number" name="onlinePaymentTotal" class="textdesign" placeholder="Online">
+        </div>
+        <div id="submitbtncontainer">
+            <input id="submitbtn" type="submit" value="Edit">
+        </div>
+        <input type="hidden" id="TotalInput" name="totalInput">
+        <input type="hidden" name="selectedItems" id="SelectedItems">
+        <input type="hidden" name="quantity" id="Quantity">
+    </form>
+</div>
+<div id="ItemsDiv">
+    <div class="heading">
+        Select Items
+    </div>
+    <div class="search-bar">
+        <input type="text" id="search-item" placeholder="Search Item" autofocus>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/editOrder.js' %}"></script>
+{% endblock %}

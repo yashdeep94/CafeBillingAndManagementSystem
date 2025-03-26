@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}| Add Item{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/additem.css' %}">
+{% endblock %}
+{% block content %}
+<div id="AddItemSection">
+    <div class="heading">
+        ADD ITEM
+    </div>
+    <form action="{% url 'ROBO:Additem' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <input class="textdesign" type="text" name="name" placeholder="Name" required>
+        </div>
+        <div>
+            <input type="number" class="textdesign" name="price" placeholder="Amount" required>
+        </div>
+        <div>
+            <select name="category" id="Category" class="textdesign selectdesign" required></select>
+        </div>
+        <div>
+            <select name="size" id="Size" class="textdesign selectdesign" required></select>
+        </div>
+        <div id="mainCategory">
+            <select name="mainCategory" class="textdesign" id="mainCategoryId" required></select>
+        </div>
+        <div id="submitbtncontainer">
+            <input id="submitbtn" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/additem.js' %}"></script>
+{% endblock %}

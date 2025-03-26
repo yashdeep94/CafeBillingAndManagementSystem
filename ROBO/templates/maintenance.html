@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}| Maintenance{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/maintenance.css' %}">
+{% endblock %}
+{% block content %}
+<div id="maintenanceSection">
+    <div class="heading">
+        MAINTENANCE
+    </div>
+    <form action="{% url 'ROBO:Maintenance' %}" method="POST">
+        {% csrf_token %}
+        <div id="MaintenanceName">
+            <input class="textdesign" type="text" name="name" placeholder="Name" required>
+        </div>
+        <div>
+            <input type="number" id="maintenancePrice" class="textdesign" name="price" placeholder="Amount" required>
+        </div>
+        <div>
+            <input type="date" id="maintenanceDate" class="textdesign" name="MaintenanceDate" required>
+        </div>
+        <div id="submitbtncontainer">
+            <input id="submitbtn" type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
+{% block js %}
+<!-- <script src=""></script> -->
+{% endblock %}

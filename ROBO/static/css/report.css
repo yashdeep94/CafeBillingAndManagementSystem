@@ -1,0 +1,275 @@
+#reportSection{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1.5rem 10rem;
+}
+#reportGrid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--yellow);
+    padding:1rem;
+    row-gap: 1.5rem;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+}
+#reportGrid > div:first-child{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#reportGrid > div{
+    text-align: center;
+}
+#mainReportGrid{
+    background-color: var(--yellow);
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.textdesign{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    width:99.7%;
+    color: white;
+    font-size: 1rem;
+}
+.textdesign::placeholder{
+    font-size: 1rem;
+    color: white;
+}
+
+#submitbtn{
+    background-color: var(--black);
+    border:1px solid white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#btnContainer{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#reportDate >  input{
+    color-scheme: dark;
+}
+#reportDate{
+    width: 98%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: none;
+}
+#reportMonth, #reportYear{
+    width: 95.5%;
+    display: none;
+}
+#actualReport{
+    display: none;
+    grid-template-columns: 60% 40%;
+    background-color: var(--black);
+    column-gap: 1rem;
+
+}
+#orderReport > div{
+    color: white;
+    display: grid;
+    grid-template-columns: 12% 25% 20% 20% 23%;
+    word-break: break-all;
+}
+#maintenanceReport > div{
+    color: white;
+    display: grid;
+    grid-template-columns: 15% 35% 25% 25%;
+    word-break: break-all;
+}
+.tableHeading{
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 0.5rem;
+    border-right: 0.1rem solid var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.borderLeft{
+    border-left: 0.1rem solid white;
+}
+.borderBottom{
+    border-bottom: 0.1rem solid white;
+}
+.borderRight{
+    border-right: 0.1rem solid white;
+}
+.borderTopLeft{
+    border-top-left-radius: 0.5rem;
+}
+.borderTopRight{
+    border-top-right-radius: 0.5rem;
+}
+.borderBottomLeft{
+    border-bottom-left-radius: 0.5rem;
+}
+.borderBottomRight{
+    border-bottom-right-radius: 0.5rem;
+}
+.paddingItems{
+    padding: 0.5rem;
+}
+.noBorderRight{
+    border: none;
+}
+#Profit{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    column-gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+#Profit > div > div, #backbtnContainer > button{
+    text-align: center;
+    background-color: var(--yellow);
+    color: var(--black);
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    width: 10rem;
+    font-size: 1rem;
+}
+#backbtnContainer{
+    width: 89%;
+    text-align: right;
+}
+
+#btnBack > div{
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+#btnBack:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#btnBack{
+    transition: 0.5s;
+}
+#dailyReportdate, #monthlyReportdate, #yearlyReportdate {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+#Choice{
+    width: 99.5%;
+}
+@media only screen and (max-width:1300px){
+    #reportSection {
+        margin: 1.5rem 8rem;
+    }
+}
+@media only screen and (max-width:1100px){
+    #Profit{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        row-gap: 1rem;
+    }
+    #cashTotalDiv {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    #onlineTotalDiv {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #profitTotalDiv {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        text-align: right;
+    }
+    #profitTotalDiv > div {
+        display: inline-block;
+    }
+    #backbtnContainer {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        width: auto;
+        text-align: right;
+    }
+    #btnBack {
+        width: 11rem !important;
+    }
+}
+@media only screen and (max-width:1000px){
+    #reportSection {
+        margin: 1.5rem 5rem;
+    }
+    .textdesign{
+        width:99%;
+    }
+}
+@media only screen and (max-width:750px){
+    .textdesign{
+        width:98%;
+    }
+    #reportYear > input {
+        width: 97%;
+    }
+}
+@media only screen and (max-width:600px){
+    #reportSection {
+        margin: 1.5rem 2rem;
+    }
+    #reportGrid{
+        grid-template-columns: auto;
+    }
+    #reportGrid > div{
+        grid-column-start: 1;
+        grid-column-end: 2 !important;
+    }
+    #reportYear > input {
+        width: 99.5%;
+    }
+}
+@media only screen and (max-width:500px){
+    .textdesign{
+        width:96%;
+    }
+    #submitbtn{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:400px){
+    .textdesign{
+        width:94%;
+    }
+    #reportYear > input {
+        width: 97%;
+    }
+}
+@media only screen and (max-width:350px){
+    .textdesign{
+        width:92%;
+    }
+    #submitbtn{
+        width: 60%;
+    }
+}

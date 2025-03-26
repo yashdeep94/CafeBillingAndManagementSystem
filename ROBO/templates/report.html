@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}| Report{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/report.css' %}">
+{% endblock %}
+{% block content %}
+<div id="reportSection">
+    <div class="heading">
+        REPORT
+    </div>
+    <div id="mainReportGrid">
+        <div id="reportGrid">
+            <div>
+                <select name="choice" class="textdesign" id="Choice">
+                    <option value="dailyReport">Daily Report</option>
+                    <option value="monthlyReport">Monthly Report</option>
+                    <option value="OverAll">Yearly Report</option>
+                </select>
+            </div>
+            <div id="reportDate">
+                <input type="date" class="textdesign">
+            </div>
+            <div id="reportMonth">
+                <select class="textdesign">
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">Sepember</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            <div id="reportYear">
+                <input type="number" class="textdesign" placeholder="Select Year">
+            </div>
+            <div id="btnContainer">
+                <input id="submitbtn" type="button" value="Get Report">
+            </div>
+        </div>
+        <div id="actualReport"></div>
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+<script src="{% static 'js/report.js' %}"></script>
+{% endblock %}

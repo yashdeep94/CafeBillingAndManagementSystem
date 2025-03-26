@@ -1,0 +1,126 @@
+#AddItemSection{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1.5rem 14rem;
+}
+#AddItemSection > form{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: var(--yellow);
+    margin: 3rem;
+    padding: 1rem;
+    row-gap: 1.5rem;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+
+}
+#AddItemSection > form >div{
+    text-align: center;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.textdesign{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    width:85%;
+    color: white;
+    font-size: 1rem;
+}
+.textdesign::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+#submitbtncontainer{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#submitbtn{
+    background-color: var(--black);
+    border:1px solid white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.selectdesign{
+    width: 90%;
+}
+#mainCategoryId{
+    width: 95%;
+}
+#mainCategory{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 100%;
+}
+@media only screen and (max-width:1240px){
+    #AddItemSection {
+        margin: 1.5rem 7rem;
+    }
+}
+@media only screen and (max-width:900px){
+    #AddItemSection {
+        margin: 1.5rem 4rem;
+    }
+}
+@media only screen and (max-width:800px){
+    #AddItemSection {
+        margin: 1.5rem 2rem;
+    }
+}
+@media only screen and (max-width:750px){
+    #mainCategoryId {
+        width: 96%;
+    }
+    .selectdesign {
+        width: 92%;
+    }
+}
+@media only screen and (max-width:600px){
+    #AddItemSection > form {
+        grid-template-columns: auto;
+    }
+    #mainCategory{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #submitbtncontainer{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #mainCategoryId, .selectdesign {
+        width: 89%;
+    }
+    #submitbtn{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:500px){
+    #mainCategoryId, .selectdesign {
+        width: 91%;
+    }
+    #AddItemSection {
+        margin: 1.5rem 0.5rem;
+    }
+}
+@media only screen and (max-width:450px){
+    #mainCategoryId, .selectdesign {
+        width: 93%;
+    }
+}
+@media only screen and (max-width:370px){
+    #mainCategoryId, .selectdesign {
+        width: 95%;
+    }
+}

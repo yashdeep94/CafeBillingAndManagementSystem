@@ -1,0 +1,111 @@
+#maintenanceSection{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1.5rem 10rem;
+}
+#maintenanceSection > form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--yellow);
+    margin: 3rem 0rem;
+    padding: 1rem;
+    align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+
+}
+#MaintenanceName{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+form> div{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.textdesign{
+    background-color: var(--black);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    width:98%;
+    color: white;
+    font-size: 1rem;
+}
+.textdesign::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--gray);
+}
+#submitbtncontainer{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#maintenanceDate{
+    width: 95.5%;
+}
+#maintenancePrice{
+    width: 95%;
+}
+#submitbtn{
+    background-color: var(--black);
+    border:1px solid white;
+    padding: 0.6rem;
+    border-radius: 0.3rem;
+    color: white;
+    width: 30%;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+#maintenanceDate{
+    color-scheme: dark;
+}
+@media only screen and (max-width:1400px){
+    .textdesign {
+        width: 92.5%;
+    }
+    #maintenanceDate , #maintenancePrice {
+        width: 85%;
+    }
+}
+@media only screen and (max-width:850px){
+    #maintenanceSection{
+        margin: 1.5rem 5rem;
+    }
+}
+@media only screen and (max-width:1400px){
+    .textdesign {
+        width: 92.5%;
+    }
+    #maintenanceDate , #maintenancePrice {
+        width: 85%;
+    }
+}
+@media only screen and (max-width:550px){
+    #maintenanceSection > form{
+        grid-template-columns: auto;
+    }
+    #MaintenanceName{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #submitbtncontainer{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .textdesign, #maintenanceDate , #maintenancePrice {
+        width: 92.5%;
+    }
+    #submitbtn {
+        width: 50%;
+    }
+    #maintenanceSection{
+        margin: 1.5rem 2rem;
+    }
+}

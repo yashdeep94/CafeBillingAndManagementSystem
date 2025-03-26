@@ -1,0 +1,84 @@
+#ManageOrderSection{
+    display: grid;
+    grid-template-columns: auto;
+    margin: 1.5rem 5rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#manageOrderReport > div{
+    color: white;
+    display: grid;
+    grid-template-columns: 7% 17% 42% 11% 9% 14%;
+    word-break: break-all;
+}
+.tableHeading{
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 0.5rem;
+    border-right: 0.1rem solid var(--black);
+    font-size: 1rem;
+    font-weight: bold;
+}
+.borderLeft{
+    border-left: 0.1rem solid white;
+}
+.borderBottom{
+    border-bottom: 0.1rem solid white;
+}
+.borderRight{
+    border-right: 0.1rem solid white;
+}
+.borderTopLeft{
+    border-top-left-radius: 0.5rem;
+}
+.borderTopRight{
+    border-top-right-radius: 0.5rem;
+}
+.borderBottomLeft{
+    border-bottom-left-radius: 0.5rem;
+}
+.borderBottomRight{
+    border-bottom-right-radius: 0.5rem;
+}
+.paddingItems{
+    padding: 0.5rem;
+}
+.noBorderRight{
+    border: none;
+}
+.centerAlign{
+    text-align: center;
+}
+.centerAlign > img {
+    width: 18px;
+    cursor: pointer;
+}
+.centerAlign > img path{
+    fill: white;
+}
+
+#noDataOrder{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    text-align: center;
+}
+@media only screen and (max-width:1200px){
+    #ManageOrderSection{
+        margin: 1.5rem 1rem;
+    }
+    #manageOrderReport > div {
+        grid-template-columns: 73px 100px 532px 100px 100px 100px 100px;
+    }
+    #manageOrderReport {
+        overflow-x: scroll;
+    }
+    .centerAlign > img {
+        margin: 0rem 0.5rem;
+    }
+}

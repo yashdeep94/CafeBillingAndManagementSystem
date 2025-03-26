@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block css %}{% endblock %}
+    <title>Robo's Pizzeria {% block title %}{% endblock %}</title>
+</head>
+
+<body id="main">
+    <div id="left">
+        <div id="navigation">
+            <button><a href="{% url 'ROBO:Home' %}">Home</a></button>
+            <button><a href="{% url 'ROBO:Order' %}" id="changeOrderNav">Order</a></button>
+            <button><a href="{% url 'ROBO:ManageOrder' %}" id="changeManOrderNav">Manage Orders</a></button>
+            <button><a href="{% url 'ROBO:Report' %}" id="changeReportNav">Report</a></button>
+            <button><a href="{% url 'ROBO:Additem' %}" id="changeAddItemNav">Add Item</a></button>
+            <button><a href="{% url 'ROBO:Maintenance' %}" id="changeMaintenanceNav">Maintenance</a></button>
+            <button><a href="{% url 'ROBO:Logout' %}">Logout</a></button>
+        </div>
+        <div id="btncontainer">
+            <button id="hamburger">
+            <svg class="buttonsvg" viewBox="0 0 100 100" width="50px">
+                <line class="line top" x1="90" x2="10" y1="40" y2="40" stroke="black" stroke-width="10" stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                <line class="line bottom" x1="10" x2="90" y1="60" y2="60" stroke="black" stroke-width="10" stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+            </svg></button>
+        </div>
+    </div>
+    <div id="logo">
+        <a href="{% url 'ROBO:Home' %}" id="aNone"><img src="{% static 'images/Pizzeria logo_page-0002.webp' %}" alt="logo"></a>
+    </div>
+    <div id="contents">
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{% static 'js/base.js' %}">
+    </script>
+    {% block js %}{% endblock %}
+</body>
+</html>
