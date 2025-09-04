@@ -35,7 +35,7 @@ CafeBillingAndManagementSystem-main/
 ## Setup Instructions
 1. **Clone the repository:**
 	```bash
-	git clone <repo-url>
+	git clone https://github.com/yashdeep94/CafeBillingAndManagementSystem
 	cd CafeBillingAndManagementSystem-main
 	```
 2. **Create and activate a virtual environment (optional but recommended):**
